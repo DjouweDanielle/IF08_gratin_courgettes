@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Gruyère râpé",
+        "url": "https://fr.openfoodfacts.org/produit/3330410007397/gruyere-rape",
+        "code": "3330410007397",
+        "image": "https://images.openfoodfacts.org/images/products/333/041/000/7397/front_fr.3.400.jpg",
+        "nutriscore": "d"
+    },
+    {
+        "name": "Huile d'olive",
+        "url": "https://fr.openfoodfacts.org/produit/3178050000749/huile-d-olive-puget",
+        "code": "3178050000749",
+        "image": "https://images.openfoodfacts.org/images/products/317/805/000/0749/front_fr.95.400.jpg",
+        "nutriscore": "b"
+    },
+    {
+        "name": "10 cl Crème épaisse",
+        "url": "http://fr.openfoodfacts.org/produit/3155251205425/creme-fraiche-legere-epaisse-15-mg-bridelice",
+        "code": "3155251205425",
+        "image": "https://images.openfoodfacts.org/images/products/315/525/120/5425/front_fr.120.400.jpg",
+        "nutriscore": "d"
+    },
+    {
+        "name": "2 Gousses d'ail",
+        "url": "https://fr.openfoodfacts.org/produit/3560070423675/gousses-d-ail-carrefour",
+        "code": "3560070423675",
+        "image": "https://images.openfoodfacts.org/images/products/356/007/042/3675/front_fr.29.400.jpg",
+        "nutriscore": "d"
+    },
+    {
+        "name": "Oeufs",
+        "url": "https://fr.openfoodfacts.org/produit/3270190021179/oeufs-frais-bio-carrefour-bio",
+        "code": "3270190021179",
+        "image": "https://images.openfoodfacts.org/images/products/327/019/002/1179/front_fr.168.400.jpg",
+        "nutriscore": "d"
+    },
+    {
+        "name": "½ bûchette de chèvre",
+        "url": "https://fr.openfoodfacts.org/produit/3523230029681/sainte-maure-soignon",
+        "code": "3523230029681",
+        "image": "https://images.openfoodfacts.org/images/products/352/323/002/9681/front_fr.83.400.jpg",
+        "nutriscore": "d"
+    }
+]
