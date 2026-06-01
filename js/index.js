@@ -18,7 +18,7 @@ function renderData(product) {
     image_front_small_url,
     nutriscore_grade,
   } = product;
-  
+
   // 🌟 NOUVEAU : Récupération de l'image du badge Nutri-Score
   let nutriScoreHtml = `<p class="mb-0 text-muted">Nutri-Score <strong>Inconnu</strong></p>`;
   if (nutriscore_grade) {
@@ -27,10 +27,10 @@ function renderData(product) {
   }
 
   const card = document.createElement("div");
-  card.className = "card mb-3 shadow-sm";
+  card.className = "card mb-3 shadow-sm align-items-center";
   card.innerHTML = `
     <div class="card-body d-flex align-items-center gap-3">
-      <img src="${image_front_small_url}" class="img-thumbnail" style="max-width: 80px; height: auto;">
+      <img src="${image_front_small_url}" class="img-thumbnail" style="max-width: 80px; max-height: 120px;">
       <div>
         <h5 class="card-title mb-1">${customName}</h5>
         ${nutriScoreHtml}
@@ -42,18 +42,18 @@ function renderData(product) {
 }
 
 function getAverageGrade(score) {
-    if (score <= -1) return 'A';
-    if (score <= 2) return 'B';
-    if (score <= 10) return 'C';
-    if (score <= 18) return 'D';
-    return 'E';
+  if (score <= -1) return 'A';
+  if (score <= 2) return 'B';
+  if (score <= 10) return 'C';
+  if (score <= 18) return 'D';
+  return 'E';
 }
 
 // 🌟 NOUVEAU : Fonction pour obtenir la bonne couleur Bootstrap selon la note
 function getAlertClass(grade) {
-    if (grade === 'A' || grade === 'B') return 'alert-success'; // Vert
-    if (grade === 'C') return 'alert-warning'; // Jaune
-    return 'alert-danger'; // Rouge (D, E)
+  if (grade === 'A' || grade === 'B') return 'alert-success'; // Vert
+  if (grade === 'C') return 'alert-warning'; // Jaune
+  return 'alert-danger'; // Rouge (D, E)
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -78,15 +78,15 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const averageContainer = document.getElementById("average-nutriscore");
-      
+
       if (validCount > 0) {
         const averageScore = totalScore / validCount;
         const averageGrade = getAverageGrade(averageScore);
-        
+
         // 🌟 NOUVEAU : Application de la classe de couleur dynamique et du badge dans le titre
         const alertClass = getAlertClass(averageGrade);
         const badgeUrl = `https://static.openfoodfacts.org/images/attributes/dist/nutriscore-${averageGrade.toLowerCase()}.svg`;
-        
+
         averageContainer.className = `alert ${alertClass} text-center fs-5 shadow-sm d-flex justify-content-center align-items-center gap-3`;
         averageContainer.innerHTML = `
             <span>Nutri-Score moyen de la recette : (Score : ${averageScore.toFixed(1)})</span>
@@ -98,9 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
     .catch((error) => {
-        console.error("Erreur lors du fetch global :", error);
-        const averageContainer = document.getElementById("average-nutriscore");
-        averageContainer.className = "alert alert-danger text-center fs-5 shadow-sm";
-        averageContainer.innerHTML = "Erreur lors de la récupération des données.";
+      console.error("Erreur lors du fetch global :", error);
+      const averageContainer = document.getElementById("average-nutriscore");
+      averageContainer.className = "alert alert-danger text-center fs-5 shadow-sm";
+      averageContainer.innerHTML = "Erreur lors de la récupération des données.";
     });
 });
