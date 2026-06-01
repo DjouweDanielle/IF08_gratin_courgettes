@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <header>
-        <img src="https://assets.afcdn.com/recipe/20200430/110231_w600.webp" alt="Image de la recette" />
+    <header class="text-center mt-4 mb-4">
+        <img src="https://assets.afcdn.com/recipe/20200430/110231_w600.webp" alt="Image de la recette" class="img-fluid rounded shadow-sm mb-3" style="max-height: 300px; object-fit: cover;" />
         <div>
             <h1>
                 Gratin de courgettes au chèvre
@@ -17,64 +17,67 @@
         </div>
     </header>
 
-    <main>
-        <h2>Liste des ingrédients</h2>
+    <main class="container">
+        <div id="average-nutriscore" class="alert alert-info text-center fs-5 shadow-sm">
+            Calcul du Nutri-Score moyen en cours...
+        </div>
+
+        <h2 class="mt-4 mb-3">Liste des ingrédients</h2>
         <div id="product-list">
         </div>
 
-        <div>
-            <h2>Étapes</h2>
+        <div class="mt-5">
+            <h2 class="mb-3">Étapes</h2>
             <div>
-                <p>
-                <h4>Étape 1</h4>
-                Laver les courgettes, les couper en rondelles pas trop épaisses et faire revenir dans l'huile d'olive
-                jusqu'à ce qu'elles soient tendres, une dizaine de minutes, en remuant. </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 1</h4>
+                    <p>Laver les courgettes, les couper en rondelles pas trop épaisses et faire revenir dans l'huile d'olive jusqu'à ce qu'elles soient tendres, une dizaine de minutes, en remuant.</p>
+                </div>
 
-                <p>
-                <h4>Étape 2</h4>
-                Dans un bol, battre : la crème et l'oeuf.
-                </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 2</h4>
+                    <p>Dans un bol, battre : la crème et l'oeuf.</p>
+                </div>
 
-                <p>
-                <h4>Étape 3</h4>
-                Ajouter le sel, le poivre, muscade et les gousses d'ail finement émincées. </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 3</h4>
+                    <p>Ajouter le sel, le poivre, muscade et les gousses d'ail finement émincées.</p>
+                </div>
 
-                <p>
-                <h4>Étape 4</h4>
-                Une fois tendres, égoutter un peu les courgettes du surplus d'huile et les mettre dans un petit plat à
-                gratin.
-                </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 4</h4>
+                    <p>Une fois tendres, égoutter un peu les courgettes du surplus d'huile et les mettre dans un petit plat à gratin.</p>
+                </div>
 
-                <p>
-                <h4>Étape 5</h4>
-                Verser dessus la préparation à la crème.
-                </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 5</h4>
+                    <p>Verser dessus la préparation à la crème.</p>
+                </div>
 
-                <p>
-                <h4>Étape 6</h4>
-                Disposer sur le plat des rondelles de chèvres et un peu de gryuère râpée.
-                </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 6</h4>
+                    <p>Disposer sur le plat des rondelles de chèvres et un peu de gruyère râpé.</p>
+                </div>
 
-                <p>
-                <h4>Étape 7</h4>
-                Enfourner entre 180 et 200°C pour 30 mn, le flan doit avoir pris.
-                </p>
+                <div class="mb-3">
+                    <h4 class="h5">Étape 7</h4>
+                    <p>Enfourner entre 180 et 200°C pour 30 mn, le flan doit avoir pris.</p>
+                </div>
             </div>
         </div>
     </main>
 
-    <hr />
+    <hr class="container" />
 
-    <footer>
+    <footer class="container mb-4 text-center">
         <p>
-            <a href="https://www.marmiton.org/recettes/recette_gratin-de-courgettes-au-chevre_25581.aspx">Source de la
-                recette
-                Marmiton</a>
+            <a href="https://www.marmiton.org/recettes/recette_gratin-de-courgettes-au-chevre_25581.aspx" target="_blank" class="text-decoration-none">
+                Source de la recette Marmiton
+            </a>
         </p>
     </footer>
+
+    <script src="js/index.js"></script>
 </body>
-
-
-<script src="js/index.js"></script>
 
 </html>
